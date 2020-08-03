@@ -1,20 +1,33 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML private javafx.scene.control.Button closeButton;
     @FXML private TextField userData;
     Yoda yoda = new Yoda();
     ObiWan obiWan = new ObiWan();
     Mickey mickey = new Mickey();
     GenericsStarWars gsw = new GenericsStarWars();
+
+    public Controller() {
+
+    }
+
+    @FXML
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     @FXML
     public void closeOnSubmit(ActionEvent newEvent) throws IOException {
