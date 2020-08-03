@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="333.0" prefWidth="438.0" style="-fx-background-color: lightblue;"
+          styleClass="gridBackground" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="Controller">
+<!--    <gridLinesVisible>true</gridLinesVisible>-->
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="100.0" prefWidth="85.0" />
+      <ColumnConstraints maxWidth="24.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="200.0" minWidth="99.0" prefWidth="105.0" />
+      <ColumnConstraints maxWidth="105.0" minWidth="90.0" prefWidth="95.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="100.0" minHeight="59.0" prefHeight="84.0" />
+      <RowConstraints maxHeight="100.0" minHeight="59.0" prefHeight="88.0" />
+      <RowConstraints maxHeight="68.0" minHeight="27.0" prefHeight="41.0" />
+   </rowConstraints>
+   <children>
+      <Button alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="-2.0" maxWidth="1.7976931348623157E308"
+              mnemonicParsing="false" onAction="#characterChoiceOne" prefHeight="26.0" prefWidth="93.0" text="Click Me"
+              textFill="#1b1a1a" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <HBox prefHeight="74.0" prefWidth="6.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Button alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#characterChoiceTwo"
+              prefHeight="27.0" prefWidth="95.0" text="Click Me" textFill="#282828" GridPane.columnIndex="4"
+              GridPane.rowIndex="4">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Button>
+      <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#characterChoiceThree" prefHeight="27.0"
+              prefWidth="103.0" text="Click Me" textFill="#1b1a1a" GridPane.columnIndex="5" GridPane.rowIndex="4">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nameText" text="Name:"
+            wrappingWidth="80.0166015625" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userData" promptText="username" onAction="#processUserData" styleClass="nameTextField" GridPane.columnIndex="4"
+                 GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </TextField>
+      <Button fx:id="closeButton" alignment="TOP_RIGHT" mnemonicParsing="false" styleClass="submitButton"
+              cancelButton="true" onAction="#closeOnSubmit" prefHeight="27.0"
+              prefWidth="103.0" text="Submit" textFill="#1b1a1a" GridPane.columnIndex="8"
+              GridPane.rowIndex="2">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text fx:id="yodaCharacter" strokeType="OUTSIDE" styleClass="character1" strokeWidth="0.0" text="Yoda"
+            wrappingWidth="77.58349609375" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="obiWanCharacter" strokeType="OUTSIDE" styleClass="character2" strokeWidth="0.0" text="Obi-Wan"
+            wrappingWidth="92.22900390625" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="mickeyCharacter" strokeType="OUTSIDE" styleClass="character3" strokeWidth="0.0" text="Mickey"
+            wrappingWidth="89.3603515625" GridPane.columnIndex="5" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</GridPane>

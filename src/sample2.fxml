@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane style="-fx-background-image: url(&quot;fKiO9W.jpg&quot;);" styleClass="gridBackground2"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="Controller2">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text fill="#f5f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character" GridPane.columnIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" GridPane.columnIndex="2" />
+      <Text fx:id="characterOne" fill="#f2f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="1st Character"
+            GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text fill="#fcf7f7" strokeType="OUTSIDE" strokeWidth="0.0" text="Vs." GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text fx:id="characterTwo" styleClass="character2" fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="2nd Character" GridPane.columnIndex="2"
+            GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Button mnemonicParsing="false" style="-fx-padding: 10px 10px 10px 10px; -fx-background-color: darkgrey;" text="Choose me"
+              onAction="#characterOneButton" textFill="#55759e" GridPane.rowIndex="2">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" style="-fx-padding: 10px 10px 10px 10px; -fx-background-color: darkgray;" text="Choose me"
+              onAction="#characterTwoButton" textFill="#436086" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Button fx:id="printReport" mnemonicParsing="false" style="-fx-padding: 10px 10px 10px 10px; -fx-background-color: darkgrey;" onAction="#addDataToFile"
+              styleClass="printReportButton" text="Print report" textFill="#54708a" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font></Button>
+      <TextArea fx:id="userTextInput" id="crawlingTextArea" prefHeight="200.0" prefWidth="200.0" promptText="Crawling text here...." style="-fx-background-color: steelblue;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextArea>
+      <Text fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+   </children>
+</GridPane>
